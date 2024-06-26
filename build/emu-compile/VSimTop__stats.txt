@@ -1,0 +1,1338 @@
+Verilator Statistics Report
+
+Information:
+  Verilator 4.210 2021-07-07 rev v4.210
+  Arguments: --cc --exe --top-module SimTop +define+VERILATOR=1 +define+PRINTF_COND=1 +define+RANDOMIZE_REG_INIT +define+RANDOMIZE_MEM_INIT +define+RANDOMIZE_GARBAGE_ASSIGN +define+RANDOMIZE_DELAY=31 +define+BENCHMARK=0 -I/home/cs/arch-2024/build/../vsrc --x-assign unique -O3 -CFLAGS -g -std=c++11 -static -Wall -I/home/cs/arch-2024/difftest/src/test/csrc -I/home/cs/arch-2024/difftest/src/test/csrc/common -I/home/cs/arch-2024/difftest/src/test/csrc/difftest -DVERILATOR -Wno-maybe-uninitialized  -DNUM_CORES=1 -LDFLAGS -lpthread -lSDL2 -ldl -lz --trace --assert --stats-vars --output-split 30000 --output-split-cfuncs 30000 --trace-fst --trace-structs --no-trace-params -y ../vsrc/ram -o /home/cs/arch-2024/build/emu -Mdir ../build/emu-compile ../build/../vsrc/SimTop.sv ./src/test/vsrc/common/ram.v ./src/test/vsrc/common/difftest.v ./src/test/vsrc/common/ram.sv ./src/test/vsrc/common/EICG_wrapper.v ./src/test/vsrc/common/assert.v ./src/test/vsrc/common/SimJTAG.v ./src/test/vsrc/common/ref.v /home/cs/arch-2024/difftest/src/test/csrc/difftest/goldenmem.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/nemuproxy.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/ref.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/difftest.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/interface.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/spikedasm.cpp /home/cs/arch-2024/difftest/src/test/csrc/verilator/snapshot.cpp /home/cs/arch-2024/difftest/src/test/csrc/verilator/main.cpp /home/cs/arch-2024/difftest/src/test/csrc/verilator/emu.cpp /home/cs/arch-2024/difftest/src/test/csrc/vcs/main.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/vga.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/uart.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/common.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/flash.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/keyboard.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/SimJTAG.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/remote_bitbang.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/sdcard.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/compress.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/device.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/ram.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/axi4.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/vga.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/uart.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/common.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/flash.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/keyboard.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/SimJTAG.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/remote_bitbang.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/sdcard.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/compress.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/device.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/ram.cpp /home/cs/arch-2024/difftest/src/test/csrc/common/axi4.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/goldenmem.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/nemuproxy.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/ref.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/difftest.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/interface.cpp /home/cs/arch-2024/difftest/src/test/csrc/difftest/spikedasm.cpp
+
+Global Statistics:
+
+  Assertions, assert immediate statements                     0
+  Assertions, assert non-immediate statements                 0
+  Assertions, cover statements                                0
+  Assertions, full/parallel case                             57
+  ConstPool, Constants emitted                                0
+  ConstPool, Tables emitted                                   0
+  Optimizations, Cases complex                               34
+  Optimizations, Cases parallelized                          23
+  Optimizations, Clocker decomposed vectors                   0
+  Optimizations, Clocker seen vectors                         0
+  Optimizations, Combined CFuncs                              0
+  Optimizations, Const bit op reduction                       0
+  Optimizations, Const bit op reduction                       0
+  Optimizations, Delayed shared-sets                          0
+  Optimizations, Gate assign merged                           4
+  Optimizations, Gate inputs replaced                      1129
+  Optimizations, Gate sigs deduped                            0
+  Optimizations, Gate sigs deleted                          357
+  Optimizations, Inline unsupported                           0
+  Optimizations, Inlined instances                           28
+  Optimizations, Lifetime assign deletions                   14
+  Optimizations, Lifetime constant prop                       0
+  Optimizations, Lifetime postassign deletions               20
+  Optimizations, MergeCond longest merge                      6
+  Optimizations, MergeCond merged items                      55
+  Optimizations, MergeCond merges                            14
+  Optimizations, Prelim extracted value to ConstPool          0
+  Optimizations, Reloop iterations                          128
+  Optimizations, Reloops                                      2
+  Optimizations, Split always                                63
+  Optimizations, Split always                                 0
+  Optimizations, Substituted temps                         2145
+  Optimizations, Tables created                               0
+  Optimizations, Unrolled Iterations                         41
+  Optimizations, Unrolled Loops                               3
+  Optimizations, Vars localized                              13
+  Optimizations, expand limited                               0
+  Optimizations, expand wide words                         2176
+  Optimizations, expand wides                               469
+  Optimizations, isolate_assignments blocks                   0
+  SplitVar, Split packed variables                            0
+  SplitVar, Split unpacked arrays                             0
+  Tracing, Ignored signals                                   91
+  Tracing, Traced signals                                   363
+  Tracing, Unique changing signals                            0
+  Tracing, Unique trace codes                               626
+  Tracing, Unique traced signals                            406
+  Tristate, Tristate resolved nets                            0
+  Unknowns, variables created                                 3
+  Unrolling gave up, no initial assignment                    1
+  Warnings, Suppressed ASSIGNDLY                              6
+  Warnings, Suppressed DECLFILENAME                           6
+  Warnings, Suppressed EOFNEWLINE                             5
+  Warnings, Suppressed IMPORTSTAR                             1
+  Warnings, Suppressed LATCH                                  1
+  Warnings, Suppressed UNDRIVEN                               1
+  Warnings, Suppressed UNUSED                                40
+  Warnings, Suppressed WIDTH                                  7
+
+Performance Statistics:
+
+  Stage, Elapsed time (sec), 001_cells                 0.000000
+  Stage, Elapsed time (sec), 002_linkparse             0.007916
+  Stage, Elapsed time (sec), 003_linkdot               0.026009
+  Stage, Elapsed time (sec), 004_linkresolve           0.001592
+  Stage, Elapsed time (sec), 005_linklvalue            0.000712
+  Stage, Elapsed time (sec), 006_link                  0.000895
+  Stage, Elapsed time (sec), 007_linkInc               0.000764
+  Stage, Elapsed time (sec), 008_param                 0.006581
+  Stage, Elapsed time (sec), 009_paramlink             0.001644
+  Stage, Elapsed time (sec), 010_deadModules           0.000952
+  Stage, Elapsed time (sec), 011_width                 0.007966
+  Stage, Elapsed time (sec), 012_widthcommit           0.002378
+  Stage, Elapsed time (sec), 013_const                 0.001464
+  Stage, Elapsed time (sec), 014_assertpre             0.004655
+  Stage, Elapsed time (sec), 015_assert                0.001612
+  Stage, Elapsed time (sec), 016_wraptop               0.000162
+  Stage, Elapsed time (sec), 017_const                 0.003113
+  Stage, Elapsed time (sec), 018_split_var             0.002539
+  Stage, Elapsed time (sec), 019_split_var             0.000398
+  Stage, Elapsed time (sec), 020_dearray               0.000771
+  Stage, Elapsed time (sec), 021_linkdot               0.003842
+  Stage, Elapsed time (sec), 022_begin                 0.002200
+  Stage, Elapsed time (sec), 023_tristate              0.001845
+  Stage, Elapsed time (sec), 024_unknown               0.002531
+  Stage, Elapsed time (sec), 025_inline                0.066192
+  Stage, Elapsed time (sec), 026_linkdot               0.005506
+  Stage, Elapsed time (sec), 027_const                 0.001300
+  Stage, Elapsed time (sec), 028_deadDtypes            0.002362
+  Stage, Elapsed time (sec), 029_inst                  0.000440
+  Stage, Elapsed time (sec), 030_const                 0.001435
+  Stage, Elapsed time (sec), 031_scope                 0.008370
+  Stage, Elapsed time (sec), 032_linkdot               0.003088
+  Stage, Elapsed time (sec), 033_class                 0.000341
+  Stage, Elapsed time (sec), 034_const                 0.000920
+  Stage, Elapsed time (sec), 035_deadDtypesScoped      0.001502
+  Stage, Elapsed time (sec), 036_case                  0.004072
+  Stage, Elapsed time (sec), 037_task                  0.002501
+  Stage, Elapsed time (sec), 038_name                  0.001451
+  Stage, Elapsed time (sec), 039_unroll                0.001058
+  Stage, Elapsed time (sec), 040_slice                 0.000736
+  Stage, Elapsed time (sec), 041_const                 0.002072
+  Stage, Elapsed time (sec), 042_life                  0.001246
+  Stage, Elapsed time (sec), 043_table                 0.000858
+  Stage, Elapsed time (sec), 044_const                 0.001101
+  Stage, Elapsed time (sec), 045_deadDtypesScoped      0.001345
+  Stage, Elapsed time (sec), 046_active                0.001284
+  Stage, Elapsed time (sec), 047_split                 0.009755
+  Stage, Elapsed time (sec), 048_splitas               0.001176
+  Stage, Elapsed time (sec), 049_tracedecl             0.004065
+  Stage, Elapsed time (sec), 050_gate                  0.012968
+  Stage, Elapsed time (sec), 051_const                 0.002010
+  Stage, Elapsed time (sec), 052_deadAllScoped         0.002276
+  Stage, Elapsed time (sec), 053_reorder               0.002858
+  Stage, Elapsed time (sec), 054_delayed               0.001591
+  Stage, Elapsed time (sec), 055_activetop             0.003430
+  Stage, Elapsed time (sec), 056_order                 0.009557
+  Stage, Elapsed time (sec), 057_genclk                0.001915
+  Stage, Elapsed time (sec), 058_clock                 0.001260
+  Stage, Elapsed time (sec), 059_const                 0.001988
+  Stage, Elapsed time (sec), 060_life                  0.001765
+  Stage, Elapsed time (sec), 061_life_post             0.003066
+  Stage, Elapsed time (sec), 062_const                 0.001705
+  Stage, Elapsed time (sec), 063_deadAllScoped         0.002027
+  Stage, Elapsed time (sec), 064_changed               0.003145
+  Stage, Elapsed time (sec), 065_trace                 0.012680
+  Stage, Elapsed time (sec), 066_localize              0.006648
+  Stage, Elapsed time (sec), 067_descope               0.001534
+  Stage, Elapsed time (sec), 068_combine               0.001305
+  Stage, Elapsed time (sec), 069_const                 0.001412
+  Stage, Elapsed time (sec), 070_deadAll               0.002453
+  Stage, Elapsed time (sec), 071_clean                 0.004225
+  Stage, Elapsed time (sec), 072_premit                0.003036
+  Stage, Elapsed time (sec), 073_expand                0.202106
+  Stage, Elapsed time (sec), 074_const_cpp             0.033574
+  Stage, Elapsed time (sec), 075_subst                 0.021279
+  Stage, Elapsed time (sec), 076_const_cpp             0.013492
+  Stage, Elapsed time (sec), 077_deadAll               0.008479
+  Stage, Elapsed time (sec), 078_merge_cond            0.001288
+  Stage, Elapsed time (sec), 079_reloop                0.001383
+  Stage, Elapsed time (sec), 080_depth                 0.004543
+  Stage, Elapsed time (sec), 081_cast                  0.012576
+  Stage, Elapsed time (sec), 082_cuse                  0.004672
+  Stage, Memory (MB), 001_cells                       13.492188
+  Stage, Memory (MB), 002_linkparse                   13.507812
+  Stage, Memory (MB), 003_linkdot                     15.199219
+  Stage, Memory (MB), 004_linkresolve                 15.199219
+  Stage, Memory (MB), 005_linklvalue                  15.199219
+  Stage, Memory (MB), 006_link                        15.199219
+  Stage, Memory (MB), 007_linkInc                     15.199219
+  Stage, Memory (MB), 008_param                       15.843750
+  Stage, Memory (MB), 009_paramlink                   15.843750
+  Stage, Memory (MB), 010_deadModules                 15.843750
+  Stage, Memory (MB), 011_width                       15.843750
+  Stage, Memory (MB), 012_widthcommit                 15.843750
+  Stage, Memory (MB), 013_const                       15.843750
+  Stage, Memory (MB), 014_assertpre                   15.843750
+  Stage, Memory (MB), 015_assert                      15.843750
+  Stage, Memory (MB), 016_wraptop                     15.843750
+  Stage, Memory (MB), 017_const                       15.843750
+  Stage, Memory (MB), 018_split_var                   15.843750
+  Stage, Memory (MB), 019_split_var                   15.843750
+  Stage, Memory (MB), 020_dearray                     15.843750
+  Stage, Memory (MB), 021_linkdot                     15.843750
+  Stage, Memory (MB), 022_begin                       15.843750
+  Stage, Memory (MB), 023_tristate                    15.843750
+  Stage, Memory (MB), 024_unknown                     15.843750
+  Stage, Memory (MB), 025_inline                      22.804688
+  Stage, Memory (MB), 026_linkdot                     22.804688
+  Stage, Memory (MB), 027_const                       22.804688
+  Stage, Memory (MB), 028_deadDtypes                  22.804688
+  Stage, Memory (MB), 029_inst                        22.804688
+  Stage, Memory (MB), 030_const                       22.804688
+  Stage, Memory (MB), 031_scope                       22.804688
+  Stage, Memory (MB), 032_linkdot                     22.804688
+  Stage, Memory (MB), 033_class                       22.804688
+  Stage, Memory (MB), 034_const                       22.804688
+  Stage, Memory (MB), 035_deadDtypesScoped            22.804688
+  Stage, Memory (MB), 036_case                        22.804688
+  Stage, Memory (MB), 037_task                        22.804688
+  Stage, Memory (MB), 038_name                        22.804688
+  Stage, Memory (MB), 039_unroll                      22.804688
+  Stage, Memory (MB), 040_slice                       22.804688
+  Stage, Memory (MB), 041_const                       22.804688
+  Stage, Memory (MB), 042_life                        22.804688
+  Stage, Memory (MB), 043_table                       22.804688
+  Stage, Memory (MB), 044_const                       22.804688
+  Stage, Memory (MB), 045_deadDtypesScoped            22.804688
+  Stage, Memory (MB), 046_active                      22.804688
+  Stage, Memory (MB), 047_split                       22.804688
+  Stage, Memory (MB), 048_splitas                     22.804688
+  Stage, Memory (MB), 049_tracedecl                   22.804688
+  Stage, Memory (MB), 050_gate                        22.804688
+  Stage, Memory (MB), 051_const                       22.804688
+  Stage, Memory (MB), 052_deadAllScoped               22.804688
+  Stage, Memory (MB), 053_reorder                     22.804688
+  Stage, Memory (MB), 054_delayed                     22.804688
+  Stage, Memory (MB), 055_activetop                   22.804688
+  Stage, Memory (MB), 056_order                       22.804688
+  Stage, Memory (MB), 057_genclk                      22.804688
+  Stage, Memory (MB), 058_clock                       22.804688
+  Stage, Memory (MB), 059_const                       22.804688
+  Stage, Memory (MB), 060_life                        22.804688
+  Stage, Memory (MB), 061_life_post                   22.804688
+  Stage, Memory (MB), 062_const                       22.804688
+  Stage, Memory (MB), 063_deadAllScoped               22.804688
+  Stage, Memory (MB), 064_changed                     22.804688
+  Stage, Memory (MB), 065_trace                       22.804688
+  Stage, Memory (MB), 066_localize                    22.804688
+  Stage, Memory (MB), 067_descope                     22.804688
+  Stage, Memory (MB), 068_combine                     22.804688
+  Stage, Memory (MB), 069_const                       22.804688
+  Stage, Memory (MB), 070_deadAll                     22.804688
+  Stage, Memory (MB), 071_clean                       22.804688
+  Stage, Memory (MB), 072_premit                      22.804688
+  Stage, Memory (MB), 073_expand                      44.718750
+  Stage, Memory (MB), 074_const_cpp                   44.718750
+  Stage, Memory (MB), 075_subst                       44.718750
+  Stage, Memory (MB), 076_const_cpp                   44.718750
+  Stage, Memory (MB), 077_deadAll                     44.718750
+  Stage, Memory (MB), 078_merge_cond                  44.718750
+  Stage, Memory (MB), 079_reloop                      44.718750
+  Stage, Memory (MB), 080_depth                       44.718750
+  Stage, Memory (MB), 081_cast                        44.718750
+  Stage, Memory (MB), 082_cuse                        44.718750
+
+Stage Statistics:
+  Stat                                                               Link       PreOrder   Scoped     Final      Final_Fast
+  --------                                                           -------    -------    -------    -------    -------  
+
+  Branch prediction,                                                     106        629        630        589        105
+  Branch prediction, VL_UNLIKELY                                                                 1         57         10
+
+  Instruction count, TOTAL                                             15100     239203     259105     432077      95561
+  Instruction count, fast critical                                         0      18294      99132     190160      95526
+
+  Node count, ACTIVE                                                                 37
+  Node count, ADD                                                         54         96         96        232        105
+  Node count, ADDROFCFUNC                                                                        3          3
+  Node count, ALWAYS                                                      59        165
+  Node count, AND                                                         20        338        343       5401       1310
+  Node count, ARG                                                        235
+  Node count, ARRAYSEL                                                                           7          7          1
+  Node count, ASSIGN                                                     823        701        700       1879        492
+  Node count, ASSIGNDLY                                                  114         85         82         49         17
+  Node count, ASSIGNPOST                                                             33         13         10         10
+  Node count, ASSIGNPRE                                                              33         13         10         10
+  Node count, ASSIGNW                                                     69         56         56         14          7
+  Node count, ATTROF                                                     321
+  Node count, BASICDTYPE                                                 812         88         83         96
+  Node count, BEGIN                                                      537
+  Node count, CASE                                                        57
+  Node count, CASEITEM                                                   338
+  Node count, CASTPARSE                                                    3
+  Node count, CCALL                                                                  28         34         34          9
+  Node count, CCAST                                                                                      9830       3235
+  Node count, CELL                                                        27          2          1          1
+  Node count, CFILE                                                                                        16
+  Node count, CFUNC                                                                  38         53         56          9
+  Node count, CHANGEDET                                                                          1          1
+  Node count, CMATH                                                                 103        103        103         10
+  Node count, COMMENT                                                                91         91         91
+  Node count, CONCAT                                                     170        453        453
+  Node count, COND                                                        30        599        600       1195        526
+  Node count, CONDBOUND                                                               8          8          4          1
+  Node count, CONST                                                     2149      10799      10678      24934       6312
+  Node count, CONSTPOOL                                                    1          1          1          1
+  Node count, CRESET                                                                                      106
+  Node count, CRETURN                                                                            1          1
+  Node count, CSTMT                                                                 439        447        451        138
+  Node count, CUSE                                                                                          3
+  Node count, DISPLAY                                                      7         52         52         52         10
+  Node count, DOT                                                         20
+  Node count, ENUMDTYPE                                                   11         11         11         11
+  Node count, ENUMITEM                                                   111        111        111        111
+  Node count, ENUMITEMREF                                                526
+  Node count, EQ                                                         354        924        924       1001        192
+  Node count, EXTEND                                                                 80         82         17          5
+  Node count, FFLUSH                                                       1          1          1          1
+  Node count, FINISH                                                       5          4          4          4
+  Node count, FUNC                                                         5
+  Node count, FUNCREF                                                      9
+  Node count, GENFOR                                                       3
+  Node count, GT                                                           4          1          1          1
+  Node count, GTE                                                         10         14         14         32          8
+  Node count, GTES                                                                    2          2          2          1
+  Node count, GTS                                                                     2          2          2          1
+  Node count, IF                                                         106        629        631        646        115
+  Node count, INITIAL                                                      1          6
+  Node count, JUMPBLOCK                                                    1          2          2          2          1
+  Node count, JUMPGO                                                       1          2          2          2          1
+  Node count, JUMPLABEL                                                    1          2          2          2          1
+  Node count, LOGAND                                                      97
+  Node count, LOGNOT                                                       3
+  Node count, LOGOR                                                      205
+  Node count, LT                                                          11          6          6          6          3
+  Node count, LTE                                                                     2          2          4          1
+  Node count, LTS                                                                     4          4          4          2
+  Node count, MEMBERDTYPE                                                 66         66         66         66
+  Node count, MEMBERSEL                                                 1422
+  Node count, MODDIV                                                       1
+  Node count, MODDIVS                                                                 1          1          1
+  Node count, MODULE                                                      41          2          2          2
+  Node count, MUL                                                          2         16         16        126         59
+  Node count, NEGATE                                                                                      460        213
+  Node count, NEQ                                                         60         75         75         79         11
+  Node count, NETLIST                                                      1          1          1          1
+  Node count, NOT                                                         40        404        406        453         96
+  Node count, ONEHOT                                                                 16         16         16          4
+  Node count, ONEHOT0                                                                76         76         76          7
+  Node count, OR                                                           2        355        355       4372       1146
+  Node count, PACKAGE                                                      3          2          1          1
+  Node count, PACKAGEIMPORT                                                1
+  Node count, PACKARRAYDTYPE                                               4          4          4          4
+  Node count, PARSEREF                                                   282
+  Node count, PIN                                                        237
+  Node count, PORT                                                       181
+  Node count, RAND                                                         2          4          4          4
+  Node count, RANGE                                                      299          4          5          5
+  Node count, REDAND                                                       1
+  Node count, REDOR                                                        1          2          2
+  Node count, REFDTYPE                                                   232        180        180        171
+  Node count, REPLICATE                                                  195        168        168
+  Node count, SCOPE                                                        1          4          3          3
+  Node count, SCOPENAME                                                              46         46         46         10
+  Node count, SEL                                                                  4436       4385
+  Node count, SELBIT                                                     158
+  Node count, SELEXTRACT                                                 139
+  Node count, SELMINUS                                                    30
+  Node count, SENITEM                                                     28          4
+  Node count, SENTREE                                                     28          4
+  Node count, SFORMATF                                                     7         52         52         52         10
+  Node count, SHIFTL                                                       6         11         11       3565        987
+  Node count, SHIFTR                                                       7          8          8       3889        862
+  Node count, SHIFTRS                                                      3          6          6          6
+  Node count, SIGNED                                                      13
+  Node count, STOP                                                                   46         46         46         10
+  Node count, STRUCTDTYPE                                                 13         13         13         13
+  Node count, SUB                                                         39         11         11         31         11
+  Node count, TASK                                                        13
+  Node count, TASKREF                                                     14
+  Node count, TEXT                                                                  967        981        985        238
+  Node count, TIME                                                                   46         46         46         10
+  Node count, TOPSCOPE                                                                1          1          1
+  Node count, TRACEDECL                                                             871        871        871
+  Node count, TRACEINC                                                                         780        780
+  Node count, TYPEDEF                                                     84
+  Node count, TYPETABLE                                                    1          1          1          1
+  Node count, UNPACKARRAYDTYPE                                                                   1          1
+  Node count, VAR                                                        870        583        565        610        175
+  Node count, VARREF                                                    2897       5827       5686      12729       3393
+  Node count, VARSCOPE                                                              363        345
+  Node count, VARXREF                                                     64
+  Node count, WHILE                                                        2          2          2          4          2
+  Node count, WORDSEL                                                                                   10297       2703
+  Node count, XOR                                                          1          2          2          2
+
+  Node pairs, ACTIVE_ALWAYS                                                           1
+  Node pairs, ACTIVE_ASSIGNPRE                                                       33
+  Node pairs, ACTIVE_ASSIGNW                                                          2
+  Node pairs, ACTIVE_INITIAL                                                          1
+  Node pairs, ADD_AND                                                      1          1          1         41         20
+  Node pairs, ADD_CASTPARSE                                                3
+  Node pairs, ADD_CCAST                                                                                    84         35
+  Node pairs, ADD_CONCAT                                                             22         22
+  Node pairs, ADD_CONST                                                   19         57         57         52         23
+  Node pairs, ADD_EXTEND                                                             16         16
+  Node pairs, ADD_MEMBERSEL                                                1
+  Node pairs, ADD_MODDIV                                                   1
+  Node pairs, ADD_MUL                                                      2                               12          3
+  Node pairs, ADD_NOT                                                      9         18         18         36         18
+  Node pairs, ADD_OR                                                                                      105         52
+  Node pairs, ADD_REPLICATE                                               28
+  Node pairs, ADD_SEL                                                                28         28
+  Node pairs, ADD_SELEXTRACT                                               1
+  Node pairs, ADD_SHIFTL                                                   2          2          2          2
+  Node pairs, ADD_VARREF                                                  41         48         48        132         59
+  Node pairs, ALWAYS_ASSIGN                                                         124
+  Node pairs, ALWAYS_ASSIGNDLY                                                       10
+  Node pairs, ALWAYS_BEGIN                                                58
+  Node pairs, ALWAYS_CCALL                                                            3
+  Node pairs, ALWAYS_IF                                                    1         28
+  Node pairs, ALWAYS_SENTREE                                              28
+  Node pairs, AND_ADD                                                      1          2          2         17          6
+  Node pairs, AND_AND                                                                24         24         71         18
+  Node pairs, AND_CCAST                                                                                   633        260
+  Node pairs, AND_CMATH                                                                                     6
+  Node pairs, AND_COND                                                                                      4          2
+  Node pairs, AND_CONDBOUND                                                                                 4          1
+  Node pairs, AND_CONST                                                   12          2          2       5031       1219
+  Node pairs, AND_EQ                                                                215        215        218         44
+  Node pairs, AND_FUNCREF                                                  1
+  Node pairs, AND_MEMBERSEL                                                6
+  Node pairs, AND_MUL                                                                                      74         36
+  Node pairs, AND_NEGATE                                                                                   12          6
+  Node pairs, AND_NEQ                                                                35         35         37          9
+  Node pairs, AND_NOT                                                     18        162        165        383         72
+  Node pairs, AND_OR                                                                 42         42        607        151
+  Node pairs, AND_SEL                                                                64         69
+  Node pairs, AND_SHIFTL                                                                                   63         19
+  Node pairs, AND_SHIFTR                                                                                 1691        274
+  Node pairs, AND_SUB                                                                                       3
+  Node pairs, AND_VARREF                                                   2        130        132         48          5
+  Node pairs, AND_WORDSEL                                                                                1900        498
+  Node pairs, ARG_CONST                                                    6
+  Node pairs, ARG_DOT                                                      1
+  Node pairs, ARG_LOGAND                                                   1
+  Node pairs, ARG_MEMBERSEL                                                1
+  Node pairs, ARG_PARSEREF                                               154
+  Node pairs, ARG_REPLICATE                                                2
+  Node pairs, ARG_VARREF                                                  70
+  Node pairs, ARRAYSEL_CONST                                                                     7          7          1
+  Node pairs, ARRAYSEL_VARREF                                                                    7          7          1
+  Node pairs, ASSIGNDLY_ADD                                                7          7          7          6
+  Node pairs, ASSIGNDLY_AND                                                1          3          3         11          2
+  Node pairs, ASSIGNDLY_CONCAT                                                        1          1
+  Node pairs, ASSIGNDLY_COND                                               2          8          9          2
+  Node pairs, ASSIGNDLY_CONST                                             45         38         37         22         14
+  Node pairs, ASSIGNDLY_ENUMITEMREF                                        5
+  Node pairs, ASSIGNDLY_FUNCREF                                            2
+  Node pairs, ASSIGNDLY_GT                                                 1          1          1          1
+  Node pairs, ASSIGNDLY_MEMBERSEL                                         72
+  Node pairs, ASSIGNDLY_OR                                                 1                                4
+  Node pairs, ASSIGNDLY_PARSEREF                                          10
+  Node pairs, ASSIGNDLY_REPLICATE                                         11
+  Node pairs, ASSIGNDLY_SEL                                                          28         21
+  Node pairs, ASSIGNDLY_SELBIT                                             2
+  Node pairs, ASSIGNDLY_SHIFTL                                             1
+  Node pairs, ASSIGNDLY_SUB                                                3          3          3
+  Node pairs, ASSIGNDLY_VARREF                                            65         81         82         52         18
+  Node pairs, ASSIGNPOST_VARREF                                                      66         26         20         20
+  Node pairs, ASSIGNPRE_VARREF                                                       66         26         20         20
+  Node pairs, ASSIGNW_AND                                                  2          6          6          6          3
+  Node pairs, ASSIGNW_CONCAT                                               1         24         24
+  Node pairs, ASSIGNW_COND                                                 7          4          4          2          1
+  Node pairs, ASSIGNW_CONDBOUND                                                       2          2
+  Node pairs, ASSIGNW_CONST                                                5
+  Node pairs, ASSIGNW_DOT                                                  6
+  Node pairs, ASSIGNW_ENUMITEMREF                                          2
+  Node pairs, ASSIGNW_EQ                                                   2
+  Node pairs, ASSIGNW_EXTEND                                                          2          2
+  Node pairs, ASSIGNW_FUNCREF                                              2
+  Node pairs, ASSIGNW_LOGAND                                               2
+  Node pairs, ASSIGNW_MEMBERSEL                                           40
+  Node pairs, ASSIGNW_NOT                                                  1
+  Node pairs, ASSIGNW_OR                                                                                    6          3
+  Node pairs, ASSIGNW_PARSEREF                                            15
+  Node pairs, ASSIGNW_RAND                                                 1
+  Node pairs, ASSIGNW_REDOR                                                1
+  Node pairs, ASSIGNW_REPLICATE                                            6
+  Node pairs, ASSIGNW_SEL                                                            44         44
+  Node pairs, ASSIGNW_SELBIT                                               3
+  Node pairs, ASSIGNW_SELEXTRACT                                           9
+  Node pairs, ASSIGNW_SELMINUS                                             2
+  Node pairs, ASSIGNW_VARREF                                              31         30         30         14          7
+  Node pairs, ASSIGN_ADD                                                  38          6          6          8          2
+  Node pairs, ASSIGN_AND                                                  13         34         34        224         29
+  Node pairs, ASSIGN_ARRAYSEL                                                                    5          5          1
+  Node pairs, ASSIGN_CCAST                                                                                296        128
+  Node pairs, ASSIGN_CMATH                                                            7          7          5
+  Node pairs, ASSIGN_CONCAT                                                          86         86
+  Node pairs, ASSIGN_COND                                                 15         46         46         49         19
+  Node pairs, ASSIGN_CONST                                               265        273        270        413         69
+  Node pairs, ASSIGN_ENUMITEMREF                                         191
+  Node pairs, ASSIGN_EQ                                                    2
+  Node pairs, ASSIGN_EXTEND                                                          14         14         17          5
+  Node pairs, ASSIGN_FUNCREF                                               2
+  Node pairs, ASSIGN_LOGNOT                                                1
+  Node pairs, ASSIGN_LOGOR                                                 1
+  Node pairs, ASSIGN_MEMBERSEL                                           644
+  Node pairs, ASSIGN_NOT                                                   4
+  Node pairs, ASSIGN_OR                                                    1                              539         80
+  Node pairs, ASSIGN_PARSEREF                                              4
+  Node pairs, ASSIGN_RAND                                                             3          3          3
+  Node pairs, ASSIGN_REDAND                                                1
+  Node pairs, ASSIGN_REPLICATE                                            75
+  Node pairs, ASSIGN_SEL                                                            576        576
+  Node pairs, ASSIGN_SELBIT                                                5
+  Node pairs, ASSIGN_SELEXTRACT                                           20
+  Node pairs, ASSIGN_SELMINUS                                             14
+  Node pairs, ASSIGN_SHIFTL                                                1                                8          2
+  Node pairs, ASSIGN_SHIFTR                                                1                               12          4
+  Node pairs, ASSIGN_SHIFTRS                                               1
+  Node pairs, ASSIGN_SUB                                                   2          2          2          2
+  Node pairs, ASSIGN_VARREF                                              344        355        351        350         49
+  Node pairs, ASSIGN_WORDSEL                                                                             1827        596
+  Node pairs, ASSIGN_XOR                                                   1
+  Node pairs, ATTROF_MEMBERSEL                                           150
+  Node pairs, ATTROF_VARREF                                              139
+  Node pairs, ATTROF_VARXREF                                              32
+  Node pairs, BASICDTYPE_RANGE                                           295
+  Node pairs, BEGIN_ASSIGN                                               340
+  Node pairs, BEGIN_ASSIGNDLY                                             46
+  Node pairs, BEGIN_BEGIN                                                  1
+  Node pairs, BEGIN_CASE                                                  34
+  Node pairs, BEGIN_DISPLAY                                                6
+  Node pairs, BEGIN_GENFOR                                                 3
+  Node pairs, BEGIN_IF                                                    54
+  Node pairs, BEGIN_TASKREF                                               13
+  Node pairs, BEGIN_VAR                                                    5
+  Node pairs, CASEITEM_ASSIGN                                              7
+  Node pairs, CASEITEM_ASSIGNDLY                                           4
+  Node pairs, CASEITEM_BEGIN                                             324
+  Node pairs, CASEITEM_CONST                                              39
+  Node pairs, CASEITEM_ENUMITEMREF                                       163
+  Node pairs, CASEITEM_IF                                                  3
+  Node pairs, CASEITEM_VARREF                                             84
+  Node pairs, CASE_CASEITEM                                               57
+  Node pairs, CASE_MEMBERSEL                                              11
+  Node pairs, CASE_SELBIT                                                  2
+  Node pairs, CASE_SELEXTRACT                                              2
+  Node pairs, CASE_VARREF                                                 42
+  Node pairs, CASTPARSE_CONST                                              3
+  Node pairs, CASTPARSE_MEMBERSEL                                          3
+  Node pairs, CCALL_CONST                                                             6          6          6          4
+  Node pairs, CCALL_VARREF                                                            3          3          3
+  Node pairs, CCAST_ADD                                                                                     8          4
+  Node pairs, CCAST_AND                                                                                   643        300
+  Node pairs, CCAST_CCAST                                                                                3983       1286
+  Node pairs, CCAST_COND                                                                                   22          9
+  Node pairs, CCAST_CONST                                                                                 220        100
+  Node pairs, CCAST_LT                                                                                      2          1
+  Node pairs, CCAST_LTS                                                                                     2          1
+  Node pairs, CCAST_MODDIVS                                                                                 1
+  Node pairs, CCAST_NEGATE                                                                                160         77
+  Node pairs, CCAST_NOT                                                                                     8          4
+  Node pairs, CCAST_OR                                                                                    340        123
+  Node pairs, CCAST_RAND                                                                                    1
+  Node pairs, CCAST_SHIFTR                                                                                488        158
+  Node pairs, CCAST_VARREF                                                                                911        305
+  Node pairs, CCAST_WORDSEL                                                                              3041        867
+  Node pairs, CELL_PIN                                                    27
+  Node pairs, CFUNC_ASSIGN                                                                       2          3          2
+  Node pairs, CFUNC_ASSIGNPRE                                                                    1
+  Node pairs, CFUNC_CCALL                                                             1          5          5
+  Node pairs, CFUNC_CHANGEDET                                                                    1          1
+  Node pairs, CFUNC_CRESET                                                                                  1
+  Node pairs, CFUNC_CRETURN                                                                      1          1
+  Node pairs, CFUNC_CSTMT                                                            18         22         22          4
+  Node pairs, CFUNC_IF                                                                           3          4          1
+  Node pairs, CFUNC_TEXT                                                                         1          1
+  Node pairs, CFUNC_TRACEDECL                                                         1          1          1
+  Node pairs, CFUNC_TRACEINC                                                                     1          1
+  Node pairs, CFUNC_VAR                                                              35         35         39          9
+  Node pairs, CMATH_TEXT                                                            103        103        103         10
+  Node pairs, CONCAT_ADD                                                   1          2          2
+  Node pairs, CONCAT_CONCAT                                               41        130        130
+  Node pairs, CONCAT_COND                                                  1          6          6
+  Node pairs, CONCAT_CONST                                                83         45         45
+  Node pairs, CONCAT_ENUMITEMREF                                           1
+  Node pairs, CONCAT_EQ                                                             182        182
+  Node pairs, CONCAT_FUNCREF                                               1
+  Node pairs, CONCAT_LT                                                    2
+  Node pairs, CONCAT_MEMBERSEL                                             3
+  Node pairs, CONCAT_NOT                                                   4         46         46
+  Node pairs, CONCAT_REDOR                                                            2          2
+  Node pairs, CONCAT_REPLICATE                                            62        164        164
+  Node pairs, CONCAT_SEL                                                            264        264
+  Node pairs, CONCAT_SELBIT                                                7
+  Node pairs, CONCAT_SELEXTRACT                                           72
+  Node pairs, CONCAT_SELMINUS                                             14
+  Node pairs, CONCAT_SHIFTR                                                1          2          2
+  Node pairs, CONCAT_SHIFTRS                                               1          2          2
+  Node pairs, CONCAT_VARREF                                               46         61         61
+  Node pairs, CONDBOUND_CCAST                                                                               4          1
+  Node pairs, CONDBOUND_GTE                                                           8          8          4          1
+  Node pairs, CONDBOUND_SEL                                                           8          8
+  Node pairs, CONDBOUND_SHIFTR                                                                              4          1
+  Node pairs, CONDBOUND_VARREF                                                        8          8
+  Node pairs, COND_ADD                                                     1         67         67        145         72
+  Node pairs, COND_AND                                                     1         16         16       1075        469
+  Node pairs, COND_CCAST                                                                                   48         22
+  Node pairs, COND_CONCAT                                                            98         98
+  Node pairs, COND_COND                                                    4        533        533       1040        475
+  Node pairs, COND_CONDBOUND                                                          2          2
+  Node pairs, COND_CONST                                                  19        233        233        331        138
+  Node pairs, COND_DOT                                                     1
+  Node pairs, COND_ENUMITEMREF                                             8
+  Node pairs, COND_EQ                                                      8         25         25         99         49
+  Node pairs, COND_EXTEND                                                            36         37
+  Node pairs, COND_GT                                                      3
+  Node pairs, COND_GTE                                                                2          2         20          6
+  Node pairs, COND_GTES                                                               2          2          2          1
+  Node pairs, COND_LT                                                                 4          4          4          2
+  Node pairs, COND_LTS                                                                2          2          2          1
+  Node pairs, COND_MEMBERSEL                                               2
+  Node pairs, COND_NEGATE                                                                                   8          2
+  Node pairs, COND_NEQ                                                                2          2          2          1
+  Node pairs, COND_OR                                                                12         12        656        271
+  Node pairs, COND_PARSEREF                                                3
+  Node pairs, COND_REPLICATE                                                          4          4
+  Node pairs, COND_SEL                                                              709        710
+  Node pairs, COND_SELBIT                                                 17
+  Node pairs, COND_SELEXTRACT                                              2
+  Node pairs, COND_SHIFTL                                                             2          2         22         11
+  Node pairs, COND_SHIFTR                                                  4          4          4         18          2
+  Node pairs, COND_SHIFTRS                                                            2          2          6
+  Node pairs, COND_SUB                                                     1          2          2          2
+  Node pairs, COND_VARREF                                                 16         38         39         79         39
+  Node pairs, COND_WORDSEL                                                                                 24         17
+  Node pairs, COND_XOR                                                                2          2          2
+  Node pairs, CONSTPOOL_MODULE                                             1          1          1          1
+  Node pairs, CRESET_VARREF                                                                               106
+  Node pairs, CRETURN_CCALL                                                                      1          1
+  Node pairs, CSTMT_TEXT                                                            439        447        451        138
+  Node pairs, DISPLAY_CONST                                                1          1          1          1
+  Node pairs, DISPLAY_SFORMATF                                             7         52         52         52         10
+  Node pairs, DOT_PARSEREF                                                38
+  Node pairs, DOT_SELBIT                                                   2
+  Node pairs, ENUMDTYPE_BASICDTYPE                                         7
+  Node pairs, ENUMDTYPE_ENUMITEM                                          11         11         11         11
+  Node pairs, ENUMDTYPE_REFDTYPE                                           4
+  Node pairs, ENUMITEM_CONST                                              14        111        111        111
+  Node pairs, EQ_ADD                                                       1          1          1          1
+  Node pairs, EQ_AND                                                                                      888        146
+  Node pairs, EQ_CCAST                                                                                     26          4
+  Node pairs, EQ_CONST                                                   155        849        849        926        185
+  Node pairs, EQ_ENUMITEMREF                                             156
+  Node pairs, EQ_MEMBERSEL                                               161
+  Node pairs, EQ_OR                                                                                        78         38
+  Node pairs, EQ_PARSEREF                                                  3
+  Node pairs, EQ_SEL                                                                881        881
+  Node pairs, EQ_SELBIT                                                   36
+  Node pairs, EQ_SELEXTRACT                                                8
+  Node pairs, EQ_VARREF                                                  188        117        117         83         11
+  Node pairs, EXTEND_LT                                                               2          2
+  Node pairs, EXTEND_LTS                                                              2          2
+  Node pairs, EXTEND_NOT                                                              8          8
+  Node pairs, EXTEND_OR                                                                                     1          1
+  Node pairs, EXTEND_SEL                                                             49         51
+  Node pairs, EXTEND_VARREF                                                          19         19         16          4
+  Node pairs, FFLUSH_CONST                                                 1          1          1          1
+  Node pairs, FUNCREF_ARG                                                  8
+  Node pairs, FUNC_VAR                                                     9
+  Node pairs, GENFOR_ALWAYS                                                1
+  Node pairs, GENFOR_ASSIGN                                                6
+  Node pairs, GENFOR_ASSIGNW                                               2
+  Node pairs, GENFOR_LT                                                    3
+  Node pairs, GTES_VARREF                                                             4          4          4          2
+  Node pairs, GTE_ADD                                                                 4          4
+  Node pairs, GTE_AND                                                                                      26          7
+  Node pairs, GTE_CONST                                                    4          8          8         26          7
+  Node pairs, GTE_EXTEND                                                              4          4
+  Node pairs, GTE_PARSEREF                                                 2
+  Node pairs, GTE_REPLICATE                                                2
+  Node pairs, GTE_SEL                                                                 8          8
+  Node pairs, GTE_SELEXTRACT                                               2
+  Node pairs, GTE_SIGNED                                                   4
+  Node pairs, GTE_VARREF                                                   6          4          4         12          2
+  Node pairs, GTS_CONST                                                               2          2          2          1
+  Node pairs, GTS_VARREF                                                              2          2          2          1
+  Node pairs, GT_CONST                                                     3
+  Node pairs, GT_DOT                                                       2
+  Node pairs, GT_VARREF                                                    3          2          2          2
+  Node pairs, IF_AND                                                                146        148        856         73
+  Node pairs, IF_ARRAYSEL                                                                        2          2
+  Node pairs, IF_ASSIGN                                                    2        378        378        416         66
+  Node pairs, IF_ASSIGNDLY                                                 7         33         32         19          3
+  Node pairs, IF_BEGIN                                                   148
+  Node pairs, IF_CCALL                                                                6          7          7          2
+  Node pairs, IF_CMATH                                                               92         92         92         10
+  Node pairs, IF_CONDBOUND                                                            4          4
+  Node pairs, IF_CONST                                                     2                     2
+  Node pairs, IF_CSTMT                                                                                      4
+  Node pairs, IF_DISPLAY                                                   1         52         52         52         10
+  Node pairs, IF_EQ                                                       66        226        226        226         10
+  Node pairs, IF_GTE                                                       8          4          4          8          1
+  Node pairs, IF_IF                                                       21        463        462        461         34
+  Node pairs, IF_LOGAND                                                   36
+  Node pairs, IF_LOGNOT                                                    2
+  Node pairs, IF_LOGOR                                                    32
+  Node pairs, IF_LT                                                        4
+  Node pairs, IF_LTE                                                                  2          2          2
+  Node pairs, IF_MEMBERSEL                                                10
+  Node pairs, IF_NEQ                                                       4          2          2          2
+  Node pairs, IF_NOT                                                       4        158        158
+  Node pairs, IF_ONEHOT0                                                              4          4          4          1
+  Node pairs, IF_OR                                                                  26         26         24          2
+  Node pairs, IF_PARSEREF                                                 14
+  Node pairs, IF_SEL                                                                528        526
+  Node pairs, IF_SELBIT                                                    4
+  Node pairs, IF_TASKREF                                                   1
+  Node pairs, IF_TRACEINC                                                                        2          1
+  Node pairs, IF_VARREF                                                   26         66         66         76         18
+  Node pairs, INITIAL_ASSIGN                                               1          6
+  Node pairs, JUMPBLOCK_JUMPLABEL                                          1          2          2          2          1
+  Node pairs, JUMPBLOCK_WHILE                                              1          2          2          2          1
+  Node pairs, LOGAND_DOT                                                   4
+  Node pairs, LOGAND_EQ                                                  130
+  Node pairs, LOGAND_GTE                                                   2
+  Node pairs, LOGAND_LOGAND                                                6
+  Node pairs, LOGAND_LOGOR                                                20
+  Node pairs, LOGAND_MEMBERSEL                                             2
+  Node pairs, LOGAND_NEQ                                                  20
+  Node pairs, LOGAND_PARSEREF                                              8
+  Node pairs, LOGAND_VARREF                                                2
+  Node pairs, LOGNOT_PARSEREF                                              3
+  Node pairs, LOGOR_EQ                                                   146
+  Node pairs, LOGOR_LOGAND                                                52
+  Node pairs, LOGOR_LOGOR                                                152
+  Node pairs, LOGOR_NEQ                                                   36
+  Node pairs, LOGOR_PARSEREF                                               6
+  Node pairs, LOGOR_VARREF                                                18
+  Node pairs, LTE_CONST                                                               2          2          4          1
+  Node pairs, LTE_VARREF                                                              2          2          4          1
+  Node pairs, LTS_VARREF                                                              8          8          8          4
+  Node pairs, LT_CONST                                                     3          2          2          2          1
+  Node pairs, LT_PARSEREF                                                  1
+  Node pairs, LT_SIGNED                                                    6
+  Node pairs, LT_VARREF                                                   12         10         10         10          5
+  Node pairs, MEMBERDTYPE_BASICDTYPE                                      11
+  Node pairs, MEMBERDTYPE_REFDTYPE                                        55
+  Node pairs, MEMBERSEL_MEMBERSEL                                         32
+  Node pairs, MEMBERSEL_SELBIT                                             2
+  Node pairs, MEMBERSEL_VARREF                                          1388
+  Node pairs, MODDIVS_CCAST                                                                                 2
+  Node pairs, MODDIVS_CONST                                                           1          1
+  Node pairs, MODDIVS_RAND                                                            1          1
+  Node pairs, MODDIV_CONST                                                 1
+  Node pairs, MODDIV_RAND                                                  1
+  Node pairs, MODULE_PACKAGEIMPORT                                         1
+  Node pairs, MODULE_PORT                                                 11
+  Node pairs, MODULE_SCOPE                                                 1          1          1          1
+  Node pairs, MODULE_VAR                                                  28          1          1          1
+  Node pairs, MUL_CCAST                                                                                   126         59
+  Node pairs, MUL_CONST                                                    2         16         16
+  Node pairs, MUL_PARSEREF                                                 1
+  Node pairs, MUL_VARREF                                                   1         16         16        126         59
+  Node pairs, NEGATE_CCAST                                                                                456        213
+  Node pairs, NEGATE_SHIFTR                                                                                 4
+  Node pairs, NEQ_AND                                                                                      86          3
+  Node pairs, NEQ_CONST                                                   22         37         37         41         10
+  Node pairs, NEQ_DOT                                                      2
+  Node pairs, NEQ_MEMBERSEL                                               78
+  Node pairs, NEQ_OR                                                                                       25          7
+  Node pairs, NEQ_SEL                                                               107        107
+  Node pairs, NEQ_VARREF                                                  18          6          6          6          2
+  Node pairs, NETLIST_CFILE                                                                                 1
+  Node pairs, NETLIST_MODULE                                               1          1          1          1
+  Node pairs, NETLIST_TYPETABLE                                            1          1          1          1
+  Node pairs, NOT_AND                                                                 2          2          2          1
+  Node pairs, NOT_CCAST                                                                                    54          9
+  Node pairs, NOT_CONST                                                    1
+  Node pairs, NOT_MEMBERSEL                                               19
+  Node pairs, NOT_ONEHOT                                                             16         16         16          4
+  Node pairs, NOT_ONEHOT0                                                            72         72         72          6
+  Node pairs, NOT_OR                                                                                       32         16
+  Node pairs, NOT_SEL                                                               262        262
+  Node pairs, NOT_SELBIT                                                   1
+  Node pairs, NOT_SELEXTRACT                                               9
+  Node pairs, NOT_SHIFTR                                                                                  158         30
+  Node pairs, NOT_SUB                                                      2          2          2          2
+  Node pairs, NOT_VARREF                                                   8         50         52
+  Node pairs, NOT_WORDSEL                                                                                 117         30
+  Node pairs, ONEHOT0_CONCAT                                                         76         76
+  Node pairs, ONEHOT0_OR                                                                                   76          7
+  Node pairs, ONEHOT_CONCAT                                                          16         16
+  Node pairs, ONEHOT_OR                                                                                    16          4
+  Node pairs, OR_AND                                                                 96         96       1076        199
+  Node pairs, OR_CCAST                                                                                    935        352
+  Node pairs, OR_COND                                                                                      20         10
+  Node pairs, OR_CONST                                                                                     47          9
+  Node pairs, OR_EQ                                                                 276        276        348         80
+  Node pairs, OR_NEQ                                                                 36         36         38          1
+  Node pairs, OR_NOT                                                                  4          4          4          2
+  Node pairs, OR_OR                                                                 275        275       1255        281
+  Node pairs, OR_PARSEREF                                                  2
+  Node pairs, OR_SEL                                                                  5          5
+  Node pairs, OR_SHIFTL                                                                                  3468        955
+  Node pairs, OR_SHIFTR                                                                                  1510        391
+  Node pairs, OR_VARREF                                                    2         18         18          4
+  Node pairs, OR_WORDSEL                                                                                   39         12
+  Node pairs, PACKAGE_SCOPE                                                           2          1          1
+  Node pairs, PACKAGE_TASK                                                 1
+  Node pairs, PACKAGE_VAR                                                  2
+  Node pairs, PACKARRAYDTYPE_RANGE                                         4          4          4          4
+  Node pairs, PACKARRAYDTYPE_REFDTYPE                                      4
+  Node pairs, PIN_AND                                                      2
+  Node pairs, PIN_CONST                                                   31
+  Node pairs, PIN_MEMBERSEL                                               31
+  Node pairs, PIN_REPLICATE                                                4
+  Node pairs, PIN_SELBIT                                                  32
+  Node pairs, PIN_SELEXTRACT                                               1
+  Node pairs, PIN_VARREF                                                 136
+  Node pairs, RANGE_CONST                                                569          8         10         10
+  Node pairs, RANGE_SUB                                                   27
+  Node pairs, RANGE_VARREF                                                 2
+  Node pairs, REDAND_REPLICATE                                             1
+  Node pairs, REDOR_MEMBERSEL                                              1
+  Node pairs, REDOR_SEL                                                               2          2
+  Node pairs, REPLICATE_AND                                                           4          4
+  Node pairs, REPLICATE_CONCAT                                           128
+  Node pairs, REPLICATE_CONST                                            198        168        168
+  Node pairs, REPLICATE_DOT                                                1
+  Node pairs, REPLICATE_REPLICATE                                          1
+  Node pairs, REPLICATE_SEL                                                         132        132
+  Node pairs, REPLICATE_SELBIT                                            45
+  Node pairs, REPLICATE_SHIFTR                                             1
+  Node pairs, REPLICATE_SHIFTRS                                            1
+  Node pairs, REPLICATE_VARREF                                            15         32         32
+  Node pairs, SCOPENAME_TEXT                                                         92         92         92         20
+  Node pairs, SCOPE_CFUNC                                                             2          2
+  Node pairs, SCOPE_VARSCOPE                                                          2          2
+  Node pairs, SELBIT_ATTROF                                              153
+  Node pairs, SELBIT_CONST                                               146
+  Node pairs, SELBIT_MEMBERSEL                                            76
+  Node pairs, SELBIT_PARSEREF                                              4
+  Node pairs, SELBIT_REPLICATE                                             2
+  Node pairs, SELBIT_VARREF                                               56
+  Node pairs, SELBIT_VARXREF                                              32
+  Node pairs, SELEXTRACT_ATTROF                                          139
+  Node pairs, SELEXTRACT_CONST                                           278
+  Node pairs, SELEXTRACT_MEMBERSEL                                        74
+  Node pairs, SELEXTRACT_VARREF                                           65
+  Node pairs, SELMINUS_ADD                                                 2
+  Node pairs, SELMINUS_ATTROF                                             29
+  Node pairs, SELMINUS_CONST                                              58
+  Node pairs, SELMINUS_PARSEREF                                            1
+  Node pairs, SELMINUS_VARREF                                             29
+  Node pairs, SEL_ADD                                                                 4          4
+  Node pairs, SEL_CMATH                                                               4          4
+  Node pairs, SEL_CONST                                                            8860       8758
+  Node pairs, SEL_MODDIVS                                                             1          1
+  Node pairs, SEL_MUL                                                                16         16
+  Node pairs, SEL_SEL                                                                 8          8
+  Node pairs, SEL_SHIFTL                                                              5          5
+  Node pairs, SEL_SHIFTR                                                              2          2
+  Node pairs, SEL_SHIFTRS                                                             2          2
+  Node pairs, SEL_VARREF                                                           4406       4355
+  Node pairs, SENITEM_PARSEREF                                            12
+  Node pairs, SENITEM_VARREF                                              16          1
+  Node pairs, SENTREE_SENITEM                                             28          4
+  Node pairs, SFORMATF_AND                                                                                  1
+  Node pairs, SFORMATF_CONST                                               1
+  Node pairs, SFORMATF_SCOPENAME                                                     46         46         46         10
+  Node pairs, SFORMATF_SEL                                                            1          1
+  Node pairs, SFORMATF_SELEXTRACT                                          1
+  Node pairs, SFORMATF_TIME                                                          46         46         46         10
+  Node pairs, SFORMATF_VARREF                                              1          1          1          1
+  Node pairs, SHIFTL_ADD                                                   3          3          3          3
+  Node pairs, SHIFTL_AND                                                                                    7          1
+  Node pairs, SHIFTL_CCAST                                                                               2212        632
+  Node pairs, SHIFTL_COND                                                                                  18          1
+  Node pairs, SHIFTL_CONST                                                 2          6          6       3539        976
+  Node pairs, SHIFTL_EQ                                                                                   110          9
+  Node pairs, SHIFTL_EXTEND                                                           4          4
+  Node pairs, SHIFTL_MEMBERSEL                                             5
+  Node pairs, SHIFTL_NEGATE                                                                               280        128
+  Node pairs, SHIFTL_NOT                                                                                   22
+  Node pairs, SHIFTL_OR                                                                                     2          1
+  Node pairs, SHIFTL_SEL                                                              7          7
+  Node pairs, SHIFTL_SELEXTRACT                                            1
+  Node pairs, SHIFTL_SUB                                                                                   20         10
+  Node pairs, SHIFTL_VARREF                                                1          2          2          2          1
+  Node pairs, SHIFTL_WORDSEL                                                                              915        215
+  Node pairs, SHIFTRS_AND                                                                                   6
+  Node pairs, SHIFTRS_CCAST                                                                                 4
+  Node pairs, SHIFTRS_SEL                                                            10         10
+  Node pairs, SHIFTRS_SELEXTRACT                                           3
+  Node pairs, SHIFTRS_SIGNED                                               3
+  Node pairs, SHIFTRS_VARREF                                                          2          2          2
+  Node pairs, SHIFTR_ADD                                                                                    8          3
+  Node pairs, SHIFTR_AND                                                                                   46         20
+  Node pairs, SHIFTR_CCAST                                                                                939        224
+  Node pairs, SHIFTR_COND                                                                                  36          9
+  Node pairs, SHIFTR_CONST                                                 4          2          2       3859        850
+  Node pairs, SHIFTR_FUNCREF                                               1
+  Node pairs, SHIFTR_MUL                                                                                   40         20
+  Node pairs, SHIFTR_OR                                                                                   242         75
+  Node pairs, SHIFTR_SEL                                                             10         10
+  Node pairs, SHIFTR_SELEXTRACT                                            5
+  Node pairs, SHIFTR_SUB                                                   3          2          2          2          1
+  Node pairs, SHIFTR_VARREF                                                1          2          2        172         54
+  Node pairs, SHIFTR_WORDSEL                                                                             2434        468
+  Node pairs, SIGNED_SELEXTRACT                                            2
+  Node pairs, SIGNED_VARREF                                               11
+  Node pairs, STRUCTDTYPE_MEMBERDTYPE                                     13         13         13         13
+  Node pairs, SUB_AND                                                                                      20         10
+  Node pairs, SUB_CCAST                                                                                    26         10
+  Node pairs, SUB_CONST                                                   64          7          7          4          1
+  Node pairs, SUB_DOT                                                      2
+  Node pairs, SUB_EXTEND                                                              2          2
+  Node pairs, SUB_PARSEREF                                                 1
+  Node pairs, SUB_REPLICATE                                                1
+  Node pairs, SUB_SEL                                                                 2          2
+  Node pairs, SUB_SELEXTRACT                                               1
+  Node pairs, SUB_SHIFTL                                                   2          2          2          2
+  Node pairs, SUB_VARREF                                                   7          9          9         10          1
+  Node pairs, TASKREF_ARG                                                 14
+  Node pairs, TASK_VAR                                                    13
+  Node pairs, TOPSCOPE_SCOPE                                                          1          1          1
+  Node pairs, TOPSCOPE_SENTREE                                                        1
+  Node pairs, TRACEDECL_AND                                                           5
+  Node pairs, TRACEDECL_COND                                                          2
+  Node pairs, TRACEDECL_CONST                                                        36
+  Node pairs, TRACEDECL_EXTEND                                                        1
+  Node pairs, TRACEDECL_NOT                                                           7
+  Node pairs, TRACEDECL_SEL                                                         667
+  Node pairs, TRACEDECL_VARREF                                                      153
+  Node pairs, TRACEINC_AND                                                                       8        300
+  Node pairs, TRACEINC_ASSIGN                                                                               3
+  Node pairs, TRACEINC_CCAST                                                                                2
+  Node pairs, TRACEINC_COND                                                                      2          2
+  Node pairs, TRACEINC_CONST                                                                    10          9
+  Node pairs, TRACEINC_EXTEND                                                                    2
+  Node pairs, TRACEINC_NOT                                                                       6
+  Node pairs, TRACEINC_OR                                                                                 329
+  Node pairs, TRACEINC_SEL                                                                     617
+  Node pairs, TRACEINC_VARREF                                                                  135        138
+  Node pairs, TYPEDEF_BASICDTYPE                                          51
+  Node pairs, TYPEDEF_ENUMDTYPE                                           11
+  Node pairs, TYPEDEF_REFDTYPE                                             9
+  Node pairs, TYPEDEF_STRUCTDTYPE                                         13
+  Node pairs, TYPETABLE_BASICDTYPE                                         1          1          1          1
+  Node pairs, UNPACKARRAYDTYPE_RANGE                                                             1          1
+  Node pairs, VAR_BASICDTYPE                                             706
+  Node pairs, VAR_COND                                                     1
+  Node pairs, VAR_CONST                                                   93
+  Node pairs, VAR_PACKARRAYDTYPE                                           4
+  Node pairs, VAR_REFDTYPE                                               160
+  Node pairs, VAR_SUB                                                      1
+  Node pairs, VAR_VARREF                                                   3
+  Node pairs, WHILE_ASSIGN                                                 2          2          2          6          3
+  Node pairs, WHILE_BEGIN                                                  2
+  Node pairs, WHILE_GTS                                                               2          2          2          1
+  Node pairs, WHILE_IF                                                                2          2          2          1
+  Node pairs, WHILE_LT                                                     2
+  Node pairs, WHILE_LTE                                                                                     2          1
+  Node pairs, WORDSEL_ADD                                                                                  36         18
+  Node pairs, WORDSEL_AND                                                                                  12          5
+  Node pairs, WORDSEL_CONST                                                                             10242       2676
+  Node pairs, WORDSEL_SHIFTR                                                                                4          2
+  Node pairs, WORDSEL_VARREF                                                                            10300       2705
+  Node pairs, XOR_VARREF                                                   2          4          4          4
+
+  Var space, non-arrays, bytes                                             0       4264       3752       4444       1393
+  Var space, scoped, bytes                                                         1583       1487
+
+  Vars, clock attribute                                                    0          1          1          1          0
+  Vars, unpacked arrayed                                                   0          0          1          1          0
+  Vars, width     1 SimTop.core.Dwait                                                 1          1          1
+  Vars, width     1 SimTop.core.Iwait                                                 1          1          1
+  Vars, width     1 SimTop.core.__Vcellinp__regfile__WE                               1          1          1
+  Vars, width     1 SimTop.core.execute.diviter.state                                 1          1          1
+  Vars, width     1 SimTop.core.execute.diviter.state_nxt                             1          1          1
+  Vars, width     1 SimTop.core.execute.is_div                                        1          1          1
+  Vars, width     1 SimTop.core.execute.is_mult                                       1          1          1
+  Vars, width     1 SimTop.core.execute.multipler.state                               1          1          1
+  Vars, width     1 SimTop.core.execute.multipler.state_nxt                           1          1          1
+  Vars, width     1 SimTop.core.memory.Datamem.sign_bit                               1          1          1
+  Vars, width     1 SimTop.core.memory.mem_unsigned                                   1          1          1
+  Vars, width     1 SimTop.core.reg_DE.hazard_reset                                   1          1          1
+  Vars, width     1 SimTop.core.reg_FD.hazard_reset                                   1          1          1
+  Vars, width     1 SimTop.exint                                                      1          1          1
+  Vars, width     1 SimTop.mux.__Vxrand3                                              1          1          1
+  Vars, width     1 SimTop.mux.busy                                                   1          1          1
+  Vars, width     1 SimTop.ram.msip                                                   1          1          1
+  Vars, width     1 SimTop.swint                                                      1          1          1
+  Vars, width     1 SimTop.trint                                                      1          1          1
+  Vars, width     1 __Vclklast__TOP__clock                                                       1          1
+  Vars, width     1 __Vdly__SimTop.core.execute.diviter.state                         1
+  Vars, width     1 __Vdly__SimTop.core.execute.multipler.state                       1
+  Vars, width     1 __Vdly__SimTop.exint                                              1
+  Vars, width     1 __Vdly__SimTop.mux.busy                                           1          1          1          1
+  Vars, width     1 __Vdly__SimTop.ram.msip                                           1          1          1          1
+  Vars, width     1 __Vdly__SimTop.swint                                              1
+  Vars, width     1 __Vdly__SimTop.trint                                              1
+  Vars, width     1 __Vm_traceActivity                                                           1          1
+  Vars, width     1 atomicResp                                                        2          2          2
+  Vars, width     1 clock                                                             1          1          1
+  Vars, width     1 en                                                                2          2          2
+  Vars, width     1 io_perfInfo_clean                                                 1          1          1
+  Vars, width     1 io_perfInfo_dump                                                  1          1          1
+  Vars, width     1 io_uart_in_valid                                                  1          1          1
+  Vars, width     1 io_uart_out_valid                                                 1          1          1
+  Vars, width     1 isRVC                                                             2          2          2          2
+  Vars, width     1 jtag_TCK                                                          2          2          2
+  Vars, width     1 jtag_TDI                                                          2          2          2
+  Vars, width     1 jtag_TDO                                                          2          2          2
+  Vars, width     1 jtag_TMS                                                          2          2          2
+  Vars, width     1 jtag_TRSTn                                                        2          2          2
+  Vars, width     1 ptwResp                                                           2          2          2
+  Vars, width     1 reset                                                             1          1          1
+  Vars, width     1 sbufferResp                                                       2          2          2
+  Vars, width     1 scFailed                                                          2          2          2          2
+  Vars, width     1 skip                                                              2          2          2          2
+  Vars, width     1 valid                                                             8          8          8          4
+  Vars, width     1 wen                                                               4          4          4          2
+  Vars, width     2 SimTop.ram.state                                                  1          1          1
+  Vars, width     2 __Vdly__SimTop.ram.state                                          1          1          1          1
+  Vars, width     3 SimTop.core.memory.msize                                          1          1          1
+  Vars, width     4 SimTop.ram.size                                                   1          1          1
+  Vars, width     4 __Vdly__SimTop.ram.size                                           1          1          1          1
+  Vars, width     5 SimTop.core.op                                                    1          1          1
+  Vars, width     8 SimTop.core.memory.strobe                                         1          1          1
+  Vars, width     8 SimTop.ram.count_down                                             1          1          1
+  Vars, width     8 __Vdly__SimTop.ram.count_down                                     1          1          1          1
+  Vars, width     8 atomicFuop                                                        2          2          2
+  Vars, width     8 atomicMask                                                        2          2          2
+  Vars, width     8 cmd                                                               2          2          2
+  Vars, width     8 code                                                              2          2          2          2
+  Vars, width     8 coreid                                                           22         22         22          8
+  Vars, width     8 fuType                                                            2          2          2
+  Vars, width     8 index                                                             6          6          6          2
+  Vars, width     8 io_uart_in_ch                                                     1          1          1
+  Vars, width     8 io_uart_out_ch                                                    1          1          1
+  Vars, width     8 level                                                             2          2          2
+  Vars, width     8 mask                                                              2          2          2
+  Vars, width     8 opType                                                            2          2          2
+  Vars, width     8 priviledgeMode                                                    2          2          2          2
+  Vars, width     8 pte_helper__Vfuncrtn                                              1          1          1
+  Vars, width     8 sbufferData_0                                                     2          2          2
+  Vars, width     8 sbufferData_1                                                     2          2          2
+  Vars, width     8 sbufferData_10                                                    2          2          2
+  Vars, width     8 sbufferData_11                                                    2          2          2
+  Vars, width     8 sbufferData_12                                                    2          2          2
+  Vars, width     8 sbufferData_13                                                    2          2          2
+  Vars, width     8 sbufferData_14                                                    2          2          2
+  Vars, width     8 sbufferData_15                                                    2          2          2
+  Vars, width     8 sbufferData_16                                                    2          2          2
+  Vars, width     8 sbufferData_17                                                    2          2          2
+  Vars, width     8 sbufferData_18                                                    2          2          2
+  Vars, width     8 sbufferData_19                                                    2          2          2
+  Vars, width     8 sbufferData_2                                                     2          2          2
+  Vars, width     8 sbufferData_20                                                    2          2          2
+  Vars, width     8 sbufferData_21                                                    2          2          2
+  Vars, width     8 sbufferData_22                                                    2          2          2
+  Vars, width     8 sbufferData_23                                                    2          2          2
+  Vars, width     8 sbufferData_24                                                    2          2          2
+  Vars, width     8 sbufferData_25                                                    2          2          2
+  Vars, width     8 sbufferData_26                                                    2          2          2
+  Vars, width     8 sbufferData_27                                                    2          2          2
+  Vars, width     8 sbufferData_28                                                    2          2          2
+  Vars, width     8 sbufferData_29                                                    2          2          2
+  Vars, width     8 sbufferData_3                                                     2          2          2
+  Vars, width     8 sbufferData_30                                                    2          2          2
+  Vars, width     8 sbufferData_31                                                    2          2          2
+  Vars, width     8 sbufferData_32                                                    2          2          2
+  Vars, width     8 sbufferData_33                                                    2          2          2
+  Vars, width     8 sbufferData_34                                                    2          2          2
+  Vars, width     8 sbufferData_35                                                    2          2          2
+  Vars, width     8 sbufferData_36                                                    2          2          2
+  Vars, width     8 sbufferData_37                                                    2          2          2
+  Vars, width     8 sbufferData_38                                                    2          2          2
+  Vars, width     8 sbufferData_39                                                    2          2          2
+  Vars, width     8 sbufferData_4                                                     2          2          2
+  Vars, width     8 sbufferData_40                                                    2          2          2
+  Vars, width     8 sbufferData_41                                                    2          2          2
+  Vars, width     8 sbufferData_42                                                    2          2          2
+  Vars, width     8 sbufferData_43                                                    2          2          2
+  Vars, width     8 sbufferData_44                                                    2          2          2
+  Vars, width     8 sbufferData_45                                                    2          2          2
+  Vars, width     8 sbufferData_46                                                    2          2          2
+  Vars, width     8 sbufferData_47                                                    2          2          2
+  Vars, width     8 sbufferData_48                                                    2          2          2
+  Vars, width     8 sbufferData_49                                                    2          2          2
+  Vars, width     8 sbufferData_5                                                     2          2          2
+  Vars, width     8 sbufferData_50                                                    2          2          2
+  Vars, width     8 sbufferData_51                                                    2          2          2
+  Vars, width     8 sbufferData_52                                                    2          2          2
+  Vars, width     8 sbufferData_53                                                    2          2          2
+  Vars, width     8 sbufferData_54                                                    2          2          2
+  Vars, width     8 sbufferData_55                                                    2          2          2
+  Vars, width     8 sbufferData_56                                                    2          2          2
+  Vars, width     8 sbufferData_57                                                    2          2          2
+  Vars, width     8 sbufferData_58                                                    2          2          2
+  Vars, width     8 sbufferData_59                                                    2          2          2
+  Vars, width     8 sbufferData_6                                                     2          2          2
+  Vars, width     8 sbufferData_60                                                    2          2          2
+  Vars, width     8 sbufferData_61                                                    2          2          2
+  Vars, width     8 sbufferData_62                                                    2          2          2
+  Vars, width     8 sbufferData_63                                                    2          2          2
+  Vars, width     8 sbufferData_7                                                     2          2          2
+  Vars, width     8 sbufferData_8                                                     2          2          2
+  Vars, width     8 sbufferData_9                                                     2          2          2
+  Vars, width     8 storeMask                                                         2          2          2
+  Vars, width     8 wdest                                                             2          2          2          2
+  Vars, width    16 SimTop.core.decode.ctl                                            1          1          1
+  Vars, width    32 SimTop.core.execute.div_tmp                                       1          1          1
+  Vars, width    32 SimTop.mux.index                                                  1          1          1
+  Vars, width    32 SimTop.mux.select                                                 1          1          1
+  Vars, width    32 SimTop.mux.unnamedblk1.i                                          1          1          1
+  Vars, width    32 SimTop.mux.unnamedblk2.i                                          1          1          1
+  Vars, width    32 __Vdly__SimTop.mux.index                                          1
+  Vars, width    32 __Vfunc_get_switch__5__Vfuncout                                   1          1          1
+  Vars, width    32 __Vilp                                                                                  1          1
+  Vars, width    32 cause                                                             2          2          2
+  Vars, width    32 get_switch__Vfuncrtn                                              1          1          1
+  Vars, width    32 instr                                                             2          2          2          2
+  Vars, width    32 intrNo                                                            2          2          2
+  Vars, width    32 jtag_tick__Vfuncrtn                                               1          1          1
+  Vars, width    34 SimTop.iresp                                                      1          1          1
+  Vars, width    64 SimTop.core.__Vcellout__pcselect__pc_selected                     1          1          1
+  Vars, width    64 SimTop.core.__Vcellout__regfile__rd1                              1          1          1
+  Vars, width    64 SimTop.core.__Vcellout__regfile__rd2                              1          1          1
+  Vars, width    64 SimTop.core.execute.__Vcellout__alu__c                            1          1          1
+  Vars, width    64 SimTop.core.execute.alu_a                                         1          1          1
+  Vars, width    64 SimTop.core.execute.alu_b                                         1          1          1
+  Vars, width    64 SimTop.core.memory.__Vcellout__Datamem__rd                        1          1          1
+  Vars, width    64 SimTop.core.memory.__Vcellout__Datamem__wd                        1          1          1
+  Vars, width    64 SimTop.core.offset                                                1          1          1
+  Vars, width    64 SimTop.core.pc                                                    1          1          1
+  Vars, width    64 SimTop.core.pcselect_mepc                                         1          1          1
+  Vars, width    64 SimTop.ram.addr                                                   1          1          1
+  Vars, width    64 SimTop.ram.cyc_cnt                                                1          1          1
+  Vars, width    64 SimTop.ram.idx                                                    1          1          1
+  Vars, width    64 SimTop.ram.ms_cnt                                                 1          1          1
+  Vars, width    64 SimTop.ram.mtime                                                  1          1          1
+  Vars, width    64 SimTop.ram.mtimecmp                                               1          1          1
+  Vars, width    64 SimTop.ram.wmask                                                  1          1          1
+  Vars, width    64 SimTop.ram.wrap1                                                  1          1          1
+  Vars, width    64 SimTop.ram.wrap2                                                  1          1          1
+  Vars, width    64 __Vdly__SimTop.core.pc                                            1
+  Vars, width    64 __Vdly__SimTop.ram.addr                                           1          1          1          1
+  Vars, width    64 __Vdly__SimTop.ram.cyc_cnt                                        1          1          1          1
+  Vars, width    64 __Vdly__SimTop.ram.ms_cnt                                         1          1          1          1
+  Vars, width    64 __Vdly__SimTop.ram.mtime                                          1          1          1          1
+  Vars, width    64 __Vdly__SimTop.ram.mtimecmp                                       1          1          1          1
+  Vars, width    64 __Vdly__SimTop.ram.wrap1                                          1
+  Vars, width    64 __Vdly__SimTop.ram.wrap2                                          1
+  Vars, width    64 __Vfunc_ram_read_helper__6__Vfuncout                              1          1          1
+  Vars, width    64 addr                                                              2          2          2
+  Vars, width    64 amo_helper__Vfuncrtn                                              1          1          1
+  Vars, width    64 atomicAddr                                                        2          2          2
+  Vars, width    64 atomicData                                                        2          2          2
+  Vars, width    64 atomicOut                                                         2          2          2
+  Vars, width    64 cycleCnt                                                          2          2          2          2
+  Vars, width    64 exceptionPC                                                       2          2          2
+  Vars, width    64 fpr_0                                                             2          2          2
+  Vars, width    64 fpr_1                                                             2          2          2
+  Vars, width    64 fpr_10                                                            2          2          2
+  Vars, width    64 fpr_11                                                            2          2          2
+  Vars, width    64 fpr_12                                                            2          2          2
+  Vars, width    64 fpr_13                                                            2          2          2
+  Vars, width    64 fpr_14                                                            2          2          2
+  Vars, width    64 fpr_15                                                            2          2          2
+  Vars, width    64 fpr_16                                                            2          2          2
+  Vars, width    64 fpr_17                                                            2          2          2
+  Vars, width    64 fpr_18                                                            2          2          2
+  Vars, width    64 fpr_19                                                            2          2          2
+  Vars, width    64 fpr_2                                                             2          2          2
+  Vars, width    64 fpr_20                                                            2          2          2
+  Vars, width    64 fpr_21                                                            2          2          2
+  Vars, width    64 fpr_22                                                            2          2          2
+  Vars, width    64 fpr_23                                                            2          2          2
+  Vars, width    64 fpr_24                                                            2          2          2
+  Vars, width    64 fpr_25                                                            2          2          2
+  Vars, width    64 fpr_26                                                            2          2          2
+  Vars, width    64 fpr_27                                                            2          2          2
+  Vars, width    64 fpr_28                                                            2          2          2
+  Vars, width    64 fpr_29                                                            2          2          2
+  Vars, width    64 fpr_3                                                             2          2          2
+  Vars, width    64 fpr_30                                                            2          2          2
+  Vars, width    64 fpr_31                                                            2          2          2
+  Vars, width    64 fpr_4                                                             2          2          2
+  Vars, width    64 fpr_5                                                             2          2          2
+  Vars, width    64 fpr_6                                                             2          2          2
+  Vars, width    64 fpr_7                                                             2          2          2
+  Vars, width    64 fpr_8                                                             2          2          2
+  Vars, width    64 fpr_9                                                             2          2          2
+  Vars, width    64 gpr_0                                                             2          2          2          2
+  Vars, width    64 gpr_1                                                             2          2          2          2
+  Vars, width    64 gpr_10                                                            2          2          2          2
+  Vars, width    64 gpr_11                                                            2          2          2          2
+  Vars, width    64 gpr_12                                                            2          2          2          2
+  Vars, width    64 gpr_13                                                            2          2          2          2
+  Vars, width    64 gpr_14                                                            2          2          2          2
+  Vars, width    64 gpr_15                                                            2          2          2          2
+  Vars, width    64 gpr_16                                                            2          2          2          2
+  Vars, width    64 gpr_17                                                            2          2          2          2
+  Vars, width    64 gpr_18                                                            2          2          2          2
+  Vars, width    64 gpr_19                                                            2          2          2          2
+  Vars, width    64 gpr_2                                                             2          2          2          2
+  Vars, width    64 gpr_20                                                            2          2          2          2
+  Vars, width    64 gpr_21                                                            2          2          2          2
+  Vars, width    64 gpr_22                                                            2          2          2          2
+  Vars, width    64 gpr_23                                                            2          2          2          2
+  Vars, width    64 gpr_24                                                            2          2          2          2
+  Vars, width    64 gpr_25                                                            2          2          2          2
+  Vars, width    64 gpr_26                                                            2          2          2          2
+  Vars, width    64 gpr_27                                                            2          2          2          2
+  Vars, width    64 gpr_28                                                            2          2          2          2
+  Vars, width    64 gpr_29                                                            2          2          2          2
+  Vars, width    64 gpr_3                                                             2          2          2          2
+  Vars, width    64 gpr_30                                                            2          2          2          2
+  Vars, width    64 gpr_31                                                            2          2          2          2
+  Vars, width    64 gpr_4                                                             2          2          2          2
+  Vars, width    64 gpr_5                                                             2          2          2          2
+  Vars, width    64 gpr_6                                                             2          2          2          2
+  Vars, width    64 gpr_7                                                             2          2          2          2
+  Vars, width    64 gpr_8                                                             2          2          2          2
+  Vars, width    64 gpr_9                                                             2          2          2          2
+  Vars, width    64 instrCnt                                                          2          2          2          2
+  Vars, width    64 io_logCtrl_log_begin                                              1          1          1
+  Vars, width    64 io_logCtrl_log_end                                                1          1          1
+  Vars, width    64 io_logCtrl_log_level                                              1          1          1
+  Vars, width    64 line                                                              2          2          2
+  Vars, width    64 mcause                                                            2          2          2          2
+  Vars, width    64 medeleg                                                           2          2          2          2
+  Vars, width    64 mepc                                                              2          2          2          2
+  Vars, width    64 mideleg                                                           2          2          2          2
+  Vars, width    64 mie                                                               2          2          2          2
+  Vars, width    64 mip                                                               2          2          2          2
+  Vars, width    64 mscratch                                                          2          2          2          2
+  Vars, width    64 mstatus                                                           2          2          2          2
+  Vars, width    64 mtval                                                             2          2          2          2
+  Vars, width    64 mtvec                                                             2          2          2          2
+  Vars, width    64 paddr                                                             2          2          2
+  Vars, width    64 pc                                                                4          4          4          4
+  Vars, width    64 pte                                                               2          2          2
+  Vars, width    64 ptwAddr                                                           2          2          2
+  Vars, width    64 ptwData_0                                                         2          2          2
+  Vars, width    64 ptwData_1                                                         2          2          2
+  Vars, width    64 ptwData_2                                                         2          2          2
+  Vars, width    64 ptwData_3                                                         2          2          2
+  Vars, width    64 rIdx                                                              2          2          2
+  Vars, width    64 ram_read_helper__Vfuncrtn                                         1          1          1
+  Vars, width    64 satp                                                              4          4          4          2
+  Vars, width    64 sbufferAddr                                                       2          2          2
+  Vars, width    64 sbufferMask                                                       2          2          2
+  Vars, width    64 scause                                                            2          2          2          2
+  Vars, width    64 sepc                                                              2          2          2          2
+  Vars, width    64 sscratch                                                          2          2          2          2
+  Vars, width    64 sstatus                                                           2          2          2          2
+  Vars, width    64 storeAddr                                                         2          2          2
+  Vars, width    64 storeData                                                         2          2          2
+  Vars, width    64 stval                                                             2          2          2          2
+  Vars, width    64 stvec                                                             2          2          2          2
+  Vars, width    64 vpn                                                               2          2          2
+  Vars, width    64 wIdx                                                              2          2          2
+  Vars, width    64 wdata                                                             6          6          6          2
+  Vars, width    64 wmask                                                             2          2          2
+  Vars, width    65 SimTop.ireq                                                       1          1          1
+  Vars, width    65 __Vdly__SimTop.ireq                                               1          1          1          1
+  Vars, width    66 SimTop.dresp                                                      1          1          1
+  Vars, width    66 SimTop.icvt.dresp                                                 1          1          1
+  Vars, width    66 SimTop.mux.__Vlvbound4                                            1          1          1
+  Vars, width    66 SimTop.oresp                                                      1          1          1
+  Vars, width    67 SimTop.core.execute.diviter.count                                 1          1          1
+  Vars, width    67 SimTop.core.execute.diviter.count_nxt                             1          1          1
+  Vars, width    67 SimTop.core.execute.multipler.count                               1          1          1
+  Vars, width    67 SimTop.core.execute.multipler.count_nxt                           1          1          1
+  Vars, width    67 __Vdly__SimTop.core.execute.diviter.count                         1
+  Vars, width    67 __Vdly__SimTop.core.execute.multipler.count                       1
+  Vars, width    96 __Vtemp10                                                                               1          1
+  Vars, width    96 __Vtemp248                                                                              1
+  Vars, width    96 __Vtemp251                                                                              1
+  Vars, width    96 __Vtemp253                                                                              1
+  Vars, width    96 __Vtemp256                                                                              1
+  Vars, width    96 __Vtemp260                                                                              1
+  Vars, width    96 __Vtemp261                                                                              1
+  Vars, width    96 __Vtemp262                                                                              1
+  Vars, width    96 __Vtemp270                                                                              1
+  Vars, width    96 __Vtemp271                                                                              1
+  Vars, width    96 __Vtemp274                                                                              1
+  Vars, width    96 __Vtemp275                                                                              1
+  Vars, width    96 __Vtemp276                                                                              1
+  Vars, width    96 __Vtemp427                                                                              1
+  Vars, width    96 __Vtemp56                                                                               1          1
+  Vars, width    96 __Vtemp59                                                                               1          1
+  Vars, width    96 __Vtemp61                                                                               1          1
+  Vars, width    96 __Vtemp64                                                                               1          1
+  Vars, width    96 __Vtemp68                                                                               1          1
+  Vars, width    96 __Vtemp69                                                                               1          1
+  Vars, width    96 __Vtemp70                                                                               1          1
+  Vars, width    96 __Vtemp78                                                                               1          1
+  Vars, width    96 __Vtemp79                                                                               1          1
+  Vars, width    96 __Vtemp82                                                                               1          1
+  Vars, width    96 __Vtemp83                                                                               1          1
+  Vars, width    96 __Vtemp84                                                                               1          1
+  Vars, width    97 SimTop.core.dataF                                                 1          1          1
+  Vars, width    97 SimTop.core.dataF_copy                                            1          1          1
+  Vars, width    97 SimTop.core.dataF_next                                            1          1          1
+  Vars, width    97 __Vdly__SimTop.core.dataF_copy                                    1
+  Vars, width    97 __Vdly__SimTop.core.dataF_next                                    1
+  Vars, width   128 __Vtemp20                                                                               1          1
+  Vars, width   128 __Vtemp264                                                                              1
+  Vars, width   128 __Vtemp34                                                                               1          1
+  Vars, width   128 __Vtemp426                                                                              1
+  Vars, width   128 __Vtemp428                                                                              1
+  Vars, width   128 __Vtemp72                                                                               1          1
+  Vars, width   129 SimTop.core.execute.diviter.p                                     1          1          1
+  Vars, width   129 SimTop.core.execute.diviter.p_nxt                                 1          1          1
+  Vars, width   129 SimTop.core.execute.multipler.p                                   1          1          1
+  Vars, width   129 SimTop.core.execute.multipler.p_nxt                               1          1          1
+  Vars, width   129 __Vdly__SimTop.core.execute.diviter.p                             1
+  Vars, width   129 __Vdly__SimTop.core.execute.multipler.p                           1
+  Vars, width   132 SimTop.__Vcellout__mux__iresps                                    1          1          1
+  Vars, width   140 SimTop.core.dataH                                                 1          1          1
+  Vars, width   140 SimTop.dreq                                                       1          1          1
+  Vars, width   151 SimTop.dcreq                                                      1          1          1
+  Vars, width   151 SimTop.icreq                                                      1          1          1
+  Vars, width   151 SimTop.mux.__Vxrand1                                              1          1          1
+  Vars, width   151 SimTop.mux.__Vxrand2                                              1          1          1
+  Vars, width   151 SimTop.mux.saved_req                                              1          1          1
+  Vars, width   151 SimTop.mux.selected_req                                           1          1          1
+  Vars, width   151 SimTop.oreq                                                       1          1          1
+  Vars, width   151 SimTop.ram.saved_oreq                                             1          1          1
+  Vars, width   151 __Vdly__SimTop.mux.saved_req                                      1
+  Vars, width   151 __Vdly__SimTop.ram.saved_oreq                                     1          1          1          1
+  Vars, width   160 __Vtemp133                                                                              1          1
+  Vars, width   160 __Vtemp263                                                                              1
+  Vars, width   160 __Vtemp265                                                                              1
+  Vars, width   160 __Vtemp266                                                                              1
+  Vars, width   160 __Vtemp277                                                                              1
+  Vars, width   160 __Vtemp327                                                                              1
+  Vars, width   160 __Vtemp71                                                                               1          1
+  Vars, width   160 __Vtemp73                                                                               1          1
+  Vars, width   160 __Vtemp74                                                                               1          1
+  Vars, width   160 __Vtemp85                                                                               1          1
+  Vars, width   214 SimTop.core.dataM                                                 1          1          1
+  Vars, width   214 SimTop.core.dataM_copy                                            1          1          1
+  Vars, width   214 SimTop.core.dataM_next                                            1          1          1
+  Vars, width   214 SimTop.core.dataW                                                 1          1          1
+  Vars, width   214 __Vdly__SimTop.core.dataM_next                                    1          1          1          1
+  Vars, width   215 SimTop.core.dataE                                                 1          1          1
+  Vars, width   215 SimTop.core.dataE_copy                                            1          1          1
+  Vars, width   215 SimTop.core.dataE_next                                            1          1          1
+  Vars, width   215 __Vdly__SimTop.core.dataE_copy                                    1
+  Vars, width   215 __Vdly__SimTop.core.dataE_next                                    1
+  Vars, width   224 __Vtemp36                                                                               1          1
+  Vars, width   302 SimTop.__Vcellinp__mux__ireqs                                     1          1          1
+  Vars, width   406 SimTop.core.dataD                                                 1          1          1
+  Vars, width   406 SimTop.core.dataD_copy                                            1          1          1
+  Vars, width   406 SimTop.core.dataD_next                                            1          1          1
+  Vars, width   406 __Vdly__SimTop.core.dataD_next                                    1
+  Vars, width   416 __Vtemp17                                                                               1          1
+  Vars, width  2048 SimTop.core.regfile.register                                      1          1          1
+  Vars, width  2048 SimTop.core.regfile.register_nxt                                  1          1          1
+  Vars, width  2048 __Vdly__SimTop.core.regfile.register                              1
